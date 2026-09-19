@@ -10,11 +10,12 @@
   };
 
 
-  const activeSticky = $("#sticky-header"),
-    $winDow = $($window);
+  // #sticky-header lives in components/header.html and is inserted after load,
+  // so it is looked up on each scroll instead of being cached here.
+  const $winDow = $($window);
   $winDow.on("scroll", function () {
     const scroll = $($window).scrollTop(),
-      isSticky = activeSticky;
+      isSticky = $("#sticky-header");
 
     if (scroll < 1) {
       isSticky.removeClass("is-sticky");
@@ -127,45 +128,64 @@
 
 
 
-  // Ajax Contact Form 
+  // Contact form -> Formspree (AJAX, page stays as it is)
+  // The endpoint is the form's action attribute in contact.html. No credentials live in this file.
 
   if ($("#contact-form").elExists()) {
 
     const contactForm = $("#contact-form"),
-      formMessages = $(".form-message");
+      formMessages = $(".form-message"),
+      submitBtn = contactForm.find('button[type="submit"]'),
+      SUCCESS_TEXT = "Thank you! Your message has been sent successfully. I'll get back to you soon.",
+      ERROR_TEXT = "Something went wrong. Please try again or contact me directly by email.";
+    let isSending = false;
+
+    function showMessage(type, text) {
+      formMessages
+        .removeClass("success text-success error text-danger")
+        .addClass(type === "success" ? "success text-success mt-3" : "error text-danger mt-3")
+        .text(text);
+    }
+
     contactForm.validate({
+      rules: {
+        name: { required: true },
+        email: { required: true, email: true },
+        message: { required: true }
+      },
       submitHandler: function (form) {
+        if (isSending) return false; // ignore extra clicks while a request is running
+        isSending = true;
+        submitBtn.prop("disabled", true).attr("aria-busy", "true");
+        formMessages.removeClass("success text-success error text-danger").text("");
+
+        // Subject: "New Portfolio Contact — <visitor name>"
+        const visitorName = $.trim($(form).find('[name="name"]').val());
+        $(form).find('[name="_subject"]').val("New Portfolio Contact — " + visitorName);
+
         $.ajax({
           type: "POST",
           url: form.action,
           data: $(form).serialize(),
+          dataType: "json",
+          headers: { Accept: "application/json" },
         })
           .done(function (response) {
-            console.log(response);
-            formMessages
-              .removeClass("error text-danger")
-              .addClass("success text-success mt-3")
-              .text(response);
-            // Clear the form.
-            form.reset();
-          })
-          .fail(function (data) {
-            // Make sure that the formMessages div has the 'error' class.
-            formMessages
-              .removeClass("success text-success")
-              .addClass("error text-danger mt-3");
-            // Set the message text.
-
-            console.log(data.responseText);
-
-            if (data.responseText !== "") {
-              formMessages.text(data.responseText);
-            } else {
-              formMessages.text(
-                "Oops! An error occured and your message could not be sent."
-              );
+            if (response && response.ok === false) {
+              showMessage("error", ERROR_TEXT);
+              return;
             }
+            showMessage("success", SUCCESS_TEXT);
+            form.reset(); // only after Formspree confirmed
+          })
+          .fail(function () {
+            showMessage("error", ERROR_TEXT); // keep technical details out of the UI
+          })
+          .always(function () {
+            isSending = false;
+            submitBtn.prop("disabled", false).removeAttr("aria-busy");
           });
+        return false;
       },
     });
   }
@@ -175,11 +195,13 @@
         Scroll Up
     -----------------------------------*/
   function scrollToTop() {
-    let $scrollUp = $("#scrollUp"),
-      $lastScrollTop = 0,
+    // #scrollUp lives in components/footer.html and is inserted after load,
+    // so it is looked up on each scroll and the click handler is delegated.
+    let $lastScrollTop = 0,
       $window = $(window);
 
     $window.on("scroll", function () {
+      const $scrollUp = $("#scrollUp");
       const st = $(this).scrollTop();
       if (st > $lastScrollTop) {
         $scrollUp.css({ bottom: "-60px" });
@@ -193,7 +215,7 @@
       $lastScrollTop = st;
     });
 
-    $scrollUp.on("click", function (evt) {
+    $(document).on("click", "#scrollUp", function (evt) {
       $("html, body").animate({ scrollTop: 0 }, 400);
       evt.preventDefault();
     });

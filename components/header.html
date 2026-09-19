@@ -1,0 +1,170 @@
+<!-- Shared site header: loaded into <div id="site-header"></div> by assets/js/components.js. Edit here once, updates every page. -->
+<div class="container-fluid">
+    <header id="sticky-header" class="header position-absolute w-100 z-3">
+        <div class="d-flex align-items-center justify-content-between">
+            <div class="flex-shrink-1">
+                <a href="index.html" class="brand-logo"><img src="assets/images/logo/zeeshan-logo.svg" width="55" alt="Brand Logo" /></a>
+            </div>
+            <div class="d-none d-xl-flex flex-grow-1 justify-content-center">
+                <nav class="main-nav">
+                    <ul class="main-menu text-capitalize d-flex flex-wrap align-items-center list-unstyled p-0 m-0">
+                        <li class="main-menu-list-item"><a href="index.html" class="main-menu-link">Home</a></li>
+                        <li class="main-menu-list-item"><a href="about-me.html" class="main-menu-link">About Me</a></li>
+                        <li class="main-menu-list-item"><a href="project.html" class="main-menu-link">Projects</a></li>
+                        <li class="main-menu-list-item"><a href="service.html" class="main-menu-link">service</a></li>
+                        <li class="main-menu-list-item"><a href="contact.html" class="main-menu-link">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+            <div class="flex-shrink-1">
+                <div class="d-flex flex-wrap align-items-center justify-content-end contact-btn-wrap">
+                    <a href="https://www.behance.net/zeeshanweb" class="social-link behance-btn" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">
+                            <path d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"></path>
+                        </svg>
+                    </a>
+                    <a href="assets/pdf/Zeeshan-Ahmad-UI-UX-Designer.pdf" class="btn btn-primary contact-btn d-none d-sm-inline-block" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 18 18" fill="none">
+                            <path
+                                d="M1 13.004V14C1 14.7956 1.31607 15.5587 1.87868 16.1213C2.44129 16.6839 3.20435 17 4 17H14C14.7956 17 15.5587 16.6839 16.1213 16.1213C16.6839 15.5587 17 14.7956 17 14V13M9 1.5V12.5M9 12.5L12.5 9M9 12.5L5.5 9"
+                                stroke="black"
+                                stroke-width="1.5"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                            />
+                        </svg>
+                        &nbsp; Download CV
+                    </a>
+                    <button class="border-0 menu-toggle-btn" id="offcanvas-toggle" data-bs-toggle="offcanvas" data-bs-target="#offcanvas" aria-controls="offcanvas">
+                        <svg width="20" height="16" viewBox="0 0 20 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M0 0H20V2H0V0ZM5 7H20V9H5V7ZM20 14H0V16H20V14Z" fill="currentColor" />
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </header>
+</div>
+<div id="offcanvas" class="offcanvas offcanvas-start bg-dark d-flex flex-column">
+    <div class="d-flex flex-wrap justify-content-between align-items-center offcanvas-header">
+        <a href="index.html"><img width="60px" src="assets/images/logo/zeeshan-logo.svg" alt="" /></a>
+        <button id="offcanvas-close" class="offcanvas-close bg-primary border-0" data-bs-dismiss="offcanvas" aria-label="Close">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M19.2803 4.71967C19.5732 5.01256 19.5732 5.48744 19.2803 5.78033L5.78033 19.2803C5.48744 19.5732 5.01256 19.5732 4.71967 19.2803C4.42678 18.9874 4.42678 18.5126 4.71967 18.2197L18.2197 4.71967C18.5126 4.42678 18.9874 4.42678 19.2803 4.71967Z"
+                    fill="white"
+                />
+                <path
+                    fill-rule="evenodd"
+                    clip-rule="evenodd"
+                    d="M4.71967 4.71967C5.01256 4.42678 5.48744 4.42678 5.78033 4.71967L19.2803 18.2197C19.5732 18.5126 19.5732 18.9874 19.2803 19.2803C18.9874 19.5732 18.5126 19.5732 18.2197 19.2803L4.71967 5.78033C4.42678 5.48744 4.42678 5.01256 4.71967 4.71967Z"
+                    fill="white"
+                />
+            </svg>
+        </button>
+    </div>
+    <div class="offcanvas-social-and-navmenu-wrap">
+        <nav class="offcanvas-nav d-flex flex-wrap flex-column justify-content-between">
+            <ul class="offcanvas-menu p-0 list-unstyled">
+                <li class="offcanvas-menu-item">
+                    <a href="index.html" class="text-white fw-bold d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">
+                        Home
+                        <span class="d-inline-block animate-arrow-up">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="offcanvas-menu-item">
+                    <a href="about-me.html" class="text-white fw-bold d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">
+                        About Me
+                        <span class="d-inline-block animate-arrow-up">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="offcanvas-menu-item">
+                    <a href="project.html" class="text-white fw-bold d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">
+                        Projects
+                        <span class="d-inline-block animate-arrow-up">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="offcanvas-menu-item">
+                    <a href="service.html" class="text-white fw-bold d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">
+                        Services
+                        <span class="d-inline-block animate-arrow-up">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+
+                <li class="offcanvas-menu-item">
+                    <a href="contact.html" class="text-white fw-bold d-flex flex-wrap align-items-center justify-content-between offcanvas-menu-link">
+                        Contact
+                        <span class="d-inline-block animate-arrow-up">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M7 17L17 7" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                                <path d="M7 7H17V17" stroke="currentColor" stroke-opacity="0.9" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
+                            </svg>
+                        </span>
+                    </a>
+                </li>
+                <li class="cv-li">
+                    <a href="assets/pdf/Zeeshan-Ahmad-UI-UX-Designer.pdf" class="btn btn-primary contact-btn d-none d-sm-inline-block" target="_blank">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" viewBox="0 0 18 18" fill="none">
+                            <path d="M1 13.004V14C1 14.7956 1.31607 15.5587 1.87868 16.1213C2.44129 16.6839 3.20435 17 4 17H14C14.7956 17 15.5587 16.6839 16.1213 16.1213C16.6839 15.5587 17 14.7956 17 14V13M9 1.5V12.5M9 12.5L12.5 9M9 12.5L5.5 9" stroke="black" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"></path>
+                        </svg>
+                        &nbsp; Download CV
+                    </a>
+                </li>
+            </ul>
+        </nav>
+    </div>
+    <nav class="py-10 mt-lg-auto">
+        <ul class="social-links d-flex flex-wrap list-unstyled">
+            <li class="social-links-item">
+                <a href="https://www.behance.net/zeeshanweb" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="18" fill="currentColor" class="bi bi-behance" viewBox="0 0 16 16">
+                        <path
+                            d="M4.654 3c.461 0 .887.035 1.278.14.39.07.711.216.996.391s.497.426.641.747c.14.32.216.711.216 1.137 0 .496-.106.922-.356 1.242-.215.32-.566.606-.997.817.606.176 1.067.496 1.348.922s.461.957.461 1.563c0 .496-.105.922-.285 1.278a2.3 2.3 0 0 1-.782.887c-.32.215-.711.39-1.137.496a5.3 5.3 0 0 1-1.278.176L0 12.803V3zm-.285 3.978c.39 0 .71-.105.957-.285.246-.18.355-.497.355-.887 0-.216-.035-.426-.105-.567a1 1 0 0 0-.32-.355 1.8 1.8 0 0 0-.461-.176c-.176-.035-.356-.035-.567-.035H2.17v2.31c0-.005 2.2-.005 2.2-.005zm.105 4.193c.215 0 .426-.035.606-.07.176-.035.356-.106.496-.216s.25-.215.356-.39c.07-.176.14-.391.14-.641 0-.496-.14-.852-.426-1.102-.285-.215-.676-.32-1.137-.32H2.17v2.734h2.305zm6.858-.035q.428.427 1.278.426c.39 0 .746-.106 1.032-.286q.426-.32.53-.64h1.74c-.286.851-.712 1.457-1.278 1.848-.566.355-1.243.566-2.06.566a4.1 4.1 0 0 1-1.527-.285 2.8 2.8 0 0 1-1.137-.782 2.85 2.85 0 0 1-.712-1.172c-.175-.461-.25-.957-.25-1.528 0-.531.07-1.032.25-1.493.18-.46.426-.852.747-1.207.32-.32.711-.606 1.137-.782a4 4 0 0 1 1.493-.285c.606 0 1.137.105 1.598.355.46.25.817.532 1.102.958.285.39.496.851.641 1.348.07.496.105.996.07 1.563h-5.15c0 .58.21 1.11.496 1.396m2.24-3.732c-.25-.25-.642-.391-1.103-.391-.32 0-.566.07-.781.176s-.356.25-.496.39a.96.96 0 0 0-.25.497c-.036.175-.07.32-.07.46h3.196c-.07-.526-.25-.882-.497-1.132zm-3.127-3.728h3.978v.957h-3.978z"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-links-item">
+                <a href="https://www.linkedin.com/in/zeeshanweb/" class="social-link" target="_blank">
+                    <svg width="13" height="18" viewBox="0 0 13 13" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path
+                            d="M3.35156 12.125H0.990234V4.5332H3.35156V12.125ZM2.1582 3.51758C1.42187 3.51758 0.8125 2.88281 0.8125 2.12109C0.8125 1.38477 1.42187 0.775391 2.1582 0.775391C2.91992 0.775391 3.5293 1.38477 3.5293 2.12109C3.5293 2.88281 2.91992 3.51758 2.1582 3.51758ZM12.1621 12.125H9.82617V8.44336C9.82617 7.55469 9.80078 6.4375 8.58203 6.4375C7.36328 6.4375 7.18555 7.37695 7.18555 8.36719V12.125H4.82422V4.5332H7.08398V5.57422H7.10937C7.43945 4.99023 8.20117 4.35547 9.34375 4.35547C11.7305 4.35547 12.1875 5.92969 12.1875 7.96094V12.125H12.1621Z"
+                            fill="currentColor"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+            <li class="social-links-item">
+                <a href="https://api.whatsapp.com/send/?phone=919582974280&amp;text=Hi+Zeeshan+Ahmad&amp;type=phone_number&amp;app_absent=0" class="social-link" target="_blank">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-whatsapp" viewBox="0 0 16 16">
+                        <path
+                            d="M13.601 2.326A7.85 7.85 0 0 0 7.994 0C3.627 0 .068 3.558.064 7.926c0 1.399.366 2.76 1.057 3.965L0 16l4.204-1.102a7.9 7.9 0 0 0 3.79.965h.004c4.368 0 7.926-3.558 7.93-7.93A7.9 7.9 0 0 0 13.6 2.326zM7.994 14.521a6.6 6.6 0 0 1-3.356-.92l-.24-.144-2.494.654.666-2.433-.156-.251a6.56 6.56 0 0 1-1.007-3.505c0-3.626 2.957-6.584 6.591-6.584a6.56 6.56 0 0 1 4.66 1.931 6.56 6.56 0 0 1 1.928 4.66c-.004 3.639-2.961 6.592-6.592 6.592m3.615-4.934c-.197-.099-1.17-.578-1.353-.646-.182-.065-.315-.099-.445.099-.133.197-.513.646-.627.775-.114.133-.232.148-.43.05-.197-.1-.836-.308-1.592-.985-.59-.525-.985-1.175-1.103-1.372-.114-.198-.011-.304.088-.403.087-.088.197-.232.296-.346.1-.114.133-.198.198-.33.065-.134.034-.248-.015-.347-.05-.099-.445-1.076-.612-1.47-.16-.389-.323-.335-.445-.34-.114-.007-.247-.007-.38-.007a.73.73 0 0 0-.529.247c-.182.198-.691.677-.691 1.654s.71 1.916.81 2.049c.098.133 1.394 2.132 3.383 2.992.47.205.84.326 1.129.418.475.152.904.129 1.246.08.38-.058 1.171-.48 1.338-.943.164-.464.164-.86.114-.943-.049-.084-.182-.133-.38-.232"
+                        ></path>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </nav>
+</div>
