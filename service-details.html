@@ -120,7 +120,9 @@
                 </div>
 
                 <div class="col-12 col-xl-6" data-aos="fade-up" data-aos-delay="500">
-                    <img class="mt-8 mt-xl-0" src="assets/images/service/service1.png" alt="service image">
+                    <center>  
+                    <img class="mt-8 mt-xl-0" border-radius="10px" width="80%" src="assets/images/service/service-ux-ui-design.png" alt="UX/UI design workspace with wireframes, user flow, components and a mobile prototype">
+                    </center> 
                 </div>
             </div>
 
@@ -273,6 +275,8 @@
                 var SERVICES = {
                     "ux-ui-design": {
                         "name": "UX/UI Design",
+                        "image": "assets/images/service/service-ux-ui-design.png",
+                        "imageAlt": "UX/UI design workspace with wireframes, user flow, components and a mobile prototype",
                         "positioning": "I design clear, usable and visually polished interfaces for web platforms, SaaS products and enterprise systems, with 7+ years of hands-on UX/UI experience.",
                         "whatIDo": "My UX/UI work starts with understanding the user problem and ends with an interface developers can build with confidence. In between: user research, user flows, information architecture, wireframes, low- and high-fidelity prototypes, interaction design and final UI, all designed responsively and reviewed for usability and accessibility. Most of my work has been on dashboards, admin panels and CRM, ERP and HRMS-style products, where clarity and structure matter as much as visual polish.",
                         "processHeading": "How I Approach UX/UI Design",
@@ -324,6 +328,8 @@
                     },
                     "product-design": {
                         "name": "Product Design",
+                        "image": "assets/images/service/service-product-design.png",
+                        "imageAlt": "SaaS product dashboard with analytics, bookings table, workflow board and design system",
                         "positioning": "I help teams turn complex requirements into simple, coherent product experiences, taking ownership from problem definition through to a shipped and improving product.",
                         "whatIDo": "Product design, for me, is about decisions, not only screens. I work with product and business stakeholders to understand user needs and business goals, define the problem clearly, shape product requirements and feature scope, and map the product flows and information architecture. From there I make the UX/UI decisions, prototype, build the design system and stay with the product as it is implemented and improved. Most of this work has been on SaaS and enterprise products.",
                         "processHeading": "From Problem to Product",
@@ -375,6 +381,8 @@
                     },
                     "frontend-development": {
                         "name": "Frontend Development",
+                        "image": "assets/images/service/service-frontend-development.png",
+                        "imageAlt": "Responsive web application in a browser and on mobile with the HTML, SASS and JavaScript behind it",
                         "positioning": "A complementary skill to my design work: I turn Figma designs into responsive, functional web interfaces and help close the gap between design and implementation.",
                         "whatIDo": "I am a designer who also builds. With HTML, CSS, SASS, Bootstrap and JavaScript, plus basic jQuery and working familiarity with React.js, I convert UI designs into working, responsive interfaces with a pixel-conscious eye. I think in components from the start, so the structure of the code reflects the structure of the design. I do not position myself as a senior software engineer or full-stack developer; this is frontend UI implementation in service of a better final product.",
                         "processHeading": "Design-to-Code Workflow",
@@ -426,6 +434,8 @@
                     },
                     "graphic-design-branding": {
                         "name": "Graphic Design & Branding",
+                        "image": "assets/images/service/service-graphic-design-branding.png",
+                        "imageAlt": "Brand board with logo exploration, typography, colour system, social creatives and guidelines",
                         "positioning": "An additional creative capability alongside my core UX/UI and Product Design work: visual identity and brand creatives that stay consistent across every touchpoint.",
                         "whatIDo": "I work on brand identity and visual identity, including logo and brand direction where a project calls for it, typography, colour systems and the wider visual language. That language then carries into marketing creatives, social media creatives, promotional graphics, digital assets and presentation design, with careful attention to layout and composition.",
                         "processHeading": "How I Approach Brand and Visual Work",
@@ -556,6 +566,12 @@
                     document.querySelectorAll('.accordion-body p').forEach(function (el, i) {
                         if (d.faqs[i]) el.textContent = d.faqs[i][1];
                     });
+
+                    var img = document.querySelector('.service-details-section center img');
+                    if (img && d.image) {
+                        img.src = d.image;
+                        img.alt = d.imageAlt || d.name;
+                    }
 
                     var ctaSub = document.querySelector('.cta-sub-title');
                     if (ctaSub) ctaSub.textContent = d.cta.sub;
